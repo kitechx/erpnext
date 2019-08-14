@@ -1,0 +1,50 @@
+<html>
+  <body>
+  
+    <style>
+
+    .text-center{
+      text-align:center;
+    }
+    
+    table {
+    border-collapse: collapse;
+    width: 100%;
+    }
+
+    th, td {
+    padding: 5px;
+    border-bottom: 1px solid #ddd;
+    }
+    </style>
+    
+    <div style="text-align:center">
+      <div style="height:10px;margin-top:20px"><b>{{ company }}</b></div><br>
+      <div>{{ title }}</div><br><br>
+      <div>{{ restaurant }}</div><br><br>
+
+      <div style="text-align:center;width:70%;margin:auto">
+        <table>
+          <thead>
+            <tr>
+              <th width="20%">Item</b></th>
+              <th width="15%" class="text-center">Options</th>
+              <th width="15%" class="text-center">Qty</th>
+            </tr>
+          </thead>
+          <tbody>
+              {% for item in items %}
+            <tr>
+              <td class="text-center">{{ item.item }}</td>
+              <td class="text-center">{{ item.product_options }}</td>
+              <td class="text-center">{{ item.qty }}</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+      
+    </div>
+    
+  </body>
+</html>

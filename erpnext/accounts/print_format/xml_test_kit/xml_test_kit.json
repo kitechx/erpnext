@@ -1,0 +1,23 @@
+{
+ "align_labels_right": 0, 
+ "creation": "2019-07-10 21:48:20.486355", 
+ "custom_format": 1, 
+ "default_print_language": "en", 
+ "disabled": 0, 
+ "doc_type": "Sales Invoice", 
+ "docstatus": 0, 
+ "doctype": "Print Format", 
+ "font": "Default", 
+ "html": "<receipt>\n\t<h4>---------Kitchen Order---------</h4>\n\t<h4>{{ _(\"Restaurant Table\") }}: {{ doc.restaurant_table }}</h4>\n\t<h4>{{ _(\"Date\") }}: {{ doc.get_formatted(\"posting_date\") }} {{ doc.get_formatted(\"posting_time\") }}</h4>\n\t<line/>\n\t<line >\n\t\t<left>\n\t\t\tItem\n\t\t</left>\n\t\t<right>\n\t\t\tQty\n\t\t</right>\n\t</line>\n\t<hr/>\n\t{% for item in doc.items %}\n\t\t{% if item.item_group_type == 'Kitchen' %}\n\t\t\t<line>\n\t\t\t\t<left>\n\t\t\t\t\t{{ item.item_name}}\n\t\t\t\t</left>\n\t\t\t\t\t\n\t\t\t\t<right>\n\t\t\t\t</span>{{ item.qty }}<span>{{ item.product_options }}</span>\n\t\t\t\t</right>\n\t\t\t</line>\n\t\t<hr/>\n\t\t{% endif %}\n\t\n\t{% endfor %}\n\t<barcode encoding=\"ean13\">5449000000996</barcode>\n</receipt>", 
+ "idx": 0, 
+ "line_breaks": 0, 
+ "modified": "2019-07-11 09:35:21.267319", 
+ "modified_by": "Administrator", 
+ "module": "Accounts", 
+ "name": "xml TEST kit", 
+ "owner": "Administrator", 
+ "print_format_builder": 0, 
+ "print_format_type": "Server", 
+ "show_section_headings": 0, 
+ "standard": "Yes"
+}
